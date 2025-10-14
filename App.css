@@ -1,0 +1,16 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  background-color: white;
+  object-fit: cover;
+}
+
+
