@@ -87,7 +87,7 @@ body {
 }
 
 .footer-bottom {
-  background-color: #2b4372;
+  background-color: #2b4372 !important;
   color: white;
   display: flex;
   flex-wrap: wrap;

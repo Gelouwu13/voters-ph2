@@ -1,56 +1,60 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./AboutUs.css";
 
-export default function AboutUs() {
-  const teamMembers = [
-    { name: "Mark", role: "Frontend Developer | UI/UX Designer", src: "/Mark.jpg" },
-    { name: "Franco", role: "Backend Developer", src: "/Franco.jpg" },
-    { name: "Kyle", role: "Frontend Developer", src: "/Kyle.jpg" },
-  ];
-
+export default function ContactUs() {
   return (
-    <div className="about-us-page d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column min-vh-100">
       {/* Main Content */}
-      <div className="container flex-grow-1 mt-5 pt-5 mb-5">
-        {/* About Section */}
-        <section className="about-text text-center mb-5">
-          <h1 className="fw-bold mb-3 text-dark">About Us</h1>
-          <p className="lead">
-            We are a group of developers aiming to provide innovative IT solutions that help
-            businesses and individuals achieve more. Our team is dedicated, creative, and
-            passionate about technology and problem-solving.
-          </p>
-        </section>
+      <div className="container mt-5 pt-5 mb-5 flex-grow-1">
+        <h2 className="text-center mb-4 fw-bold text-dark">Contact Us</h2>
 
-        {/* Team Section */}
-        <section className="team-section text-center mb-5">
-          <h2 className="fw-bold mb-4 text-dark">The Team</h2>
-          <div
-            className="team-members d-flex justify-content-center gap-4"
-            style={{ flexWrap: "nowrap" }}
-          >
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="team-member card p-3 shadow-sm border-0 text-center"
-                style={{ width: "220px", minWidth: "220px", flexShrink: 0 }}
-              >
-                <img
-                  src={member.src}
-                  alt={member.name}
-                  className="team-photo rounded-circle mb-3 mx-auto"
-                  style={{ width: "150px", height: "150px", objectFit: "cover" }}
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <form className="p-4 border rounded-3 shadow-sm bg-light">
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label fw-semibold">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Enter your name"
                 />
-                <h5 className="fw-bold">{member.name}</h5>
-                <p className="text-muted mb-0">{member.role}</p>
               </div>
-            ))}
+
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label fw-semibold">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label fw-semibold">
+                  Message
+                </label>
+                <textarea
+                  className="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Write your message here..."
+                ></textarea>
+              </div>
+
+              <button type="submit" className="register-btn btn w-100">
+                Send Message
+              </button>
+            </form>
           </div>
-        </section>
+        </div>
       </div>
 
-      {/* Footer (moved outside container) */}
+      {/* Footer */}
       <footer className="footer mt-auto">
         <div className="footer-top">
           <h1>

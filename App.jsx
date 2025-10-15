@@ -3,7 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import HomePage from "./HomePage";
 import RegistrationForm from "./RegistrationForm";
-import AboutUs from "./AboutUs"; // <-- import AboutUs
+import AboutUs from "./AboutUs";
+import ContactUs from "./ContactUs";
+import NewsEvents from "./NewsEvents"; // <-- import NewsEvents
 
 export default function App() {
   const navigate = useNavigate();
@@ -29,12 +31,19 @@ export default function App() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item mx-2">
-                <a className="nav-link" href="/">Home</a>
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => navigate("/")}
+                  style={{ textDecoration: "none" }}
+                >
+                  Home
+                </button>
               </li>
-              {/* About link navigates to /about */}
+
               <li className="nav-item mx-2">
                 <button
                   className="nav-link btn btn-link"
@@ -44,10 +53,27 @@ export default function App() {
                   About
                 </button>
               </li>
-              <li className="nav-item mx-2"><a className="nav-link" href="#">News & Events</a></li>
-              <li className="nav-item mx-2"><a className="nav-link" href="#">Contact Us</a></li>
 
-              {/* Only show Register button on Home page */}
+              <li className="nav-item mx-2">
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => navigate("/news")}
+                  style={{ textDecoration: "none" }}
+                >
+                  News & Events
+                </button>
+              </li>
+
+              <li className="nav-item mx-2">
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => navigate("/contact")}
+                  style={{ textDecoration: "none" }}
+                >
+                  Contact Us
+                </button>
+              </li>
+
               {location.pathname !== "/register" && (
                 <li className="nav-item mx-2">
                   <button
@@ -68,7 +94,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegistrationForm />} />
-          <Route path="/about" element={<AboutUs />} /> {/* <-- AboutUs route */}
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/news" element={<NewsEvents />} /> {/* <-- NewsEvents route */}
         </Routes>
       </div>
     </div>
