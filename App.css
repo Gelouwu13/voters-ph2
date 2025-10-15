@@ -13,4 +13,148 @@ body {
   object-fit: cover;
 }
 
+.custom-navbar {
+  background-color: #2b4372 !important;
+  color: white !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 40px !important;
+  font-family: Arial, sans-serif !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-item {
+  font-family: Arial, sans-serif;
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.nav-item a:hover {
+  color: #f4c542;
+}
+
+.register-btn {
+  background-color: #f4c542;
+  color: #2b4372;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.register-btn:hover {
+  background-color: #ffdb5c;
+  color: #1e3a8a;
+}
+
+
+
+.footer {
+  font-family: Arial, sans-serif;
+  margin-top: 60px;
+}
+
+.footer-top {
+  background-color: #e5e7eb;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-top h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.footer-top .hash {
+  color: #1f2937;
+}
+.footer-top .blue {
+  color: #1e3a8a;
+}
+.footer-top .red {
+  color: #dc2626;
+}
+.footer-top .yellow {
+  color: #facc15;
+}
+
+.footer-bottom {
+  background-color: #2b4372;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.footer-section {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: 4px 0;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+.navbar-brand .red {
+  color: #dc2626;
+}
+
+.navbar-brand .yellow {
+  color: #facc15;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
 

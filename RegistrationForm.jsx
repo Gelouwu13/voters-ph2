@@ -46,12 +46,12 @@ export default function App() {
   const progressPercent = (step / totalSteps) * 100;
 
   return (
-    <div>
+    <div className="margin-top">
       
 
 
       {/* Progress Bar */}
-      <div className="container mt-4">
+      <div className="container mt-4 margin">
         <div className="progress mb-4">
           <div
             className="progress-bar progress-bar-striped bg-success"
@@ -740,8 +740,65 @@ export default function App() {
             </>
           )}
 
+
+        </div>
+
+        
+      </div>
+      <footer className="footer">
+      <div className="footer-top">
+        <h1>
+          <span className="hash">#</span>
+          <span className="blue">Voters</span>
+          <span className="red">P</span>
+          <span className="yellow">H</span>
+        </h1>
+      </div>
+
+      <div className="footer-bottom">
+        <div className="footer-section">
+          <h4>REPUBLIC OF THE PHILIPPINES</h4>
+          <p>All content is in the public domain unless otherwise stated.</p>
+          <div className="footer-icons">
+            <span>🌐</span> <span>📱</span>
+          </div>
+        </div>
+
+        <div className="footer-section">
+          <h4>ABOUT GOV PH</h4>
+          <p>
+            Learn more about the Philippine government, its structure, how
+            government works, and the people behind it.
+          </p>
+          <ul>
+            <li>GOV.PH</li>
+            <li>Open Data Portal</li>
+            <li>Official Gazette</li>
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <h4>GOVERNMENT LINKS</h4>
+          <ul>
+            <li>Office of the President</li>
+            <li>Office of the Vice President</li>
+            <li>Senate of the Philippines</li>
+            <li>House of Representatives</li>
+            <li>Supreme Court</li>
+            <li>Court of Appeals</li>
+            <li>Sandiganbayan</li>
+          </ul>
+        </div>
+
+        <div className="footer-logo">
+          <div className="footer-logo-text">
+            <a className="navbar-brand fw-bold fs-1" href="#">
+              Voters<span className="red">P</span><span className="yellow">H</span>
+            </a>
+          </div>
         </div>
       </div>
+    </footer>
     </div>
   );
 }
